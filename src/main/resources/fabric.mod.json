@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "earsmod",
+  "version": "${version}",
+  "name": "Orejas Animadas",
+  "description": "Orejas de zorro, gato y perro con animaciones: reposo, caminar, correr, saltar, agacharse, nadar y más.",
+  "authors": ["Tu nombre"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/orejas-animadas",
+    "sources": "https://github.com/TU_USUARIO/orejas-animadas",
+    "issues": "https://github.com/TU_USUARIO/orejas-animadas/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/earsmod/icon.png",
+  "environment": "client",
+  "entrypoints": { "client": ["com.example.earsmod.EarsModClient"] },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}

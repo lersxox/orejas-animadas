@@ -1,0 +1,12 @@
+{
+  "key.earsmod.cycle": "Cycle ears",
+  "key.earsmod.wiggle": "Wiggle ears",
+  "key.earsmod.others": "Ears on other players",
+  "category.earsmod": "Animated Ears",
+  "earsmod.type.none": "No ears",
+  "earsmod.type.fox": "Fox ears",
+  "earsmod.type.cat": "Cat ears",
+  "earsmod.type.dog": "Dog ears",
+  "earsmod.others.on": "Ears on other players: ON",
+  "earsmod.others.off": "Ears on other players: OFF"
+}

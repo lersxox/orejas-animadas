@@ -1,0 +1,12 @@
+{
+  "key.earsmod.cycle": "Cambiar orejas",
+  "key.earsmod.wiggle": "Mover orejitas",
+  "key.earsmod.others": "Orejas en otros jugadores",
+  "category.earsmod": "Orejas Animadas",
+  "earsmod.type.none": "Sin orejas",
+  "earsmod.type.fox": "Orejas de zorro",
+  "earsmod.type.cat": "Orejas de gato",
+  "earsmod.type.dog": "Orejas de perro",
+  "earsmod.others.on": "Orejas en otros jugadores: SÍ",
+  "earsmod.others.off": "Orejas en otros jugadores: NO"
+}
