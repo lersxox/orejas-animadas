@@ -136,11 +136,11 @@ for (const p of sc.pops) { fx.addMono(I.pop(1400 + (p.midi - m('A5')) * 120, 30 
 fx.addMono(I.boing(), sc.pops[2].t + 0.25, 0.3);
 
 // ---------- REGLA 3: el gato ----------
-fx.addMono(I.vinyl(T(15) - ev.r3, { crackle: 1.6, hiss: 0.25 }), ev.r3, 0.35); // el fuego crepita
+fx.addMono(I.vinyl(T(15) - ev.r3 - BEAT, { crackle: 1.6, hiss: 0.25 }), ev.r3, 0.2); // el fuego crepita
 fx.addMono(I.scratch(0.34), ev.cat, 0.45);
 drums.addMono(I.kick({ punch: 1.3, seed: 51 }), ev.cat, 0.8);
 fx.addMono(I.woodTick(1.2), ev.cat, 0.4);
-fx.addMono(I.vinyl(T(18) - T(16), { crackle: 1.2, hiss: 0.2 }), T(16), 0.18);
+fx.addMono(I.vinyl(T(17, 3) - T(16), { crackle: 1.2, hiss: 0.2 }), T(16), 0.09); // termina un tiempo antes del cartel de la regla 4
 
 // ---------- REGLA 4: el Coliflor ----------
 for (const t of sc.clicks) { fx.addMono(I.woodTick(2.1 + R() * 0.3), t, 0.28, 0.35); fx.addMono(I.rim(1.8, Math.round(t * 100)), t, 0.1, 0.35); }
