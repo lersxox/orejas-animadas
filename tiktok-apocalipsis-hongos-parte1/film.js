@@ -157,6 +157,7 @@
       kevin(c, { x: 680, y: 1680, gesture: 'phone', eyes: 'wide', mouth: 'o', brows: 'up', sweat: 1, look: -0.6, sx: 1 + 0.06 * U.pulse(t, ev.clank, 8), sy: 1 - 0.08 * U.pulse(t, ev.clank, 8) });
     });
     L.sfx(ctx, '¡CLANK!', 560, 900, t, ev.clank, { size: 150, rot: -0.12, life: 1.6 });
+    L.flash(ctx, t, ev.clank, { dur: 0.15, color: '#FFF3C4', max: 0.55 });
   }
   // 5 · roast: ¡a correr!
   function sChase(ctx, t) {

@@ -54,7 +54,7 @@ function groove(bar, kind) {
     for (let b = 0; b < 4; b += 0.25) drums.addMono(I.shaker(b % 1 === 0), T(bar, b), 0.07, -0.3);
     bass.addMono(I.bass808(root + 12, BEAT * 3.4, { drive: 1.2, decay: 1.2 }), T(bar, 0), 0.38);
   } else if (kind === 'tense') {
-    for (const b of [0, 2]) fx.addMono(I.heartbeat(), T(bar, b), 0.55);
+    for (const b of [1, 3]) fx.addMono(I.heartbeat(), T(bar, b), 0.55); // fuera del tiempo 1, donde golpea el cartel
     bass.addMono(I.bass(m('D1'), 2.0, { bright: 0.1, sub: 1 }), T(bar, 0), 0.3);
   }
 }
@@ -130,7 +130,7 @@ for (let i = 0; i < 6; i++) zomb.addMono(I.voice(m('D2') + Math.floor(R() * 5), 
 fx.addMono(I.noiseSweep(T(10) - ev.inhale - BEAT * 0.5, 300, 5000, { q: 0.8, pink: true, shape: (x) => x * x }), ev.inhale, 0.32); // inhalaaaa
 // ¡ACHÍS!
 fx.addMono(I.noiseSweep(0.35, 7000, 2500, { q: 0.7, shape: (x) => Math.pow(1 - x, 2) }), ev.sneeze, 0.5);
-vox.addMono(I.voice(m('A4'), 0.18, { syl: 'a', type: 'tenor', seed: 40, glide: 3, breath: 0.4, shout: 1.5 }), ev.sneeze - 0.12, 0.3);
+vox.addMono(I.voice(m('A4'), 0.22, { syl: 'i', type: 'tenor', seed: 40, glide: 3, breath: 0.5, shout: 1.5 }), ev.sneeze + 0.01, 0.22); // el "-CHÍS" cae en el golpe
 drums.addMono(I.kick({ punch: 1.2, seed: 41 }), ev.sneeze, 0.7);
 for (const p of sc.pops) { fx.addMono(I.pop(1400 + (p.midi - m('A5')) * 120, 30 + p.midi), p.t, 0.55); lead.addMono(I.pizz(p.midi), p.t, 0.4); }
 fx.addMono(I.boing(), sc.pops[2].t + 0.25, 0.3);

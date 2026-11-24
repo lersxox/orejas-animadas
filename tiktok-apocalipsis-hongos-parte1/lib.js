@@ -338,7 +338,7 @@
   // onomatopeya de cómic (¡CLANK!, ¡ACHÍS!…): sale con rebote y tiembla
   L.sfx = (ctx, text, x, y, t, t0, { size = 130, color = L.C.yellow, rot = -0.1, life = 1.1, stroke = '#16121C' } = {}) => {
     const a = t - t0; if (a < 0 || a > life) return;
-    const k = ease.outBack(clamp(a / 0.14), 3), out = clamp((a - life + 0.2) / 0.2);
+    const k = lerp(1.8, 1, ease.outBack(clamp(a / 0.14), 2.2)), out = clamp((a - life + 0.2) / 0.2); // entra GRANDE en el mismo fotograma del golpe
     ctx.save(); ctx.translate(x + Math.sin(a * 60) * 4 * (1 - clamp(a / 0.4)), y); ctx.rotate(rot); ctx.scale(k * (1 + 0.15 * out), k * (1 + 0.15 * out));
     ctx.globalAlpha *= 1 - out;
     G.text(ctx, text, 0, size * 0.36, { size, fam: FAM, weight: 400, color, align: 'center', stroke, strokeW: size * 0.2, boil: 0.5 });
